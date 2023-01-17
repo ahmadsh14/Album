@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.main #top {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    padding-top: 76px;
+    padding-bottom: 32px;
+}
+
+.main #what {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 15px;
+    padding-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.main-album {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 3rem;
+    padding-bottom: 2rem;
+}
+
+.main-album section h1 {
+    cursor: pointer;
+}
