@@ -4,32 +4,31 @@
 }
 
 .main {
-
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
-    padding-right: 50px;
-    gap: 20px;
-    padding-bottom: 10px;
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+    gap: 1.25rem;
+    padding-bottom: 0.625rem;
 }
 
 .main #top {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
-    line-height: 40px;
-    padding-top: 76px;
-    padding-bottom: 32px;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    padding-top: 4.75rem;
+    padding-bottom: 2rem;
 }
 
 .main #what {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
-    font-size: 13px;
-    line-height: 15px;
-    padding-bottom: 35px;
+    font-size: 0.8125rem;
+    line-height: 0.9375rem;
+    padding-bottom: 2.1875rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
