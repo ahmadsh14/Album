@@ -1,19 +1,18 @@
-let newemail = document.querySelector('#emailch');
-const newerror = document.querySelector('#error1');
-newemail.addEventListener('submit', async(l) => {
+const inputEmail = document.querySelector('#logForm');
+const error = document.querySelector('#error1');
+inputEmail.addEventListener('submit', async(l) => {
     l.preventDefault();
-    let useremail = newemail.elements.email.value;
-    const response = await axios.get('https://jsonplaceholder.typicode.com/users')
+    const userEmail = inputEmail.elements.email.value;
+    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
     try {
-        let finaldata = response.data.find(k => k.email === useremail);
-        if (finaldata !== undefined) {
-            let myobj = JSON.stringify(finaldata)
-            localStorage.setItem('users', myobj)
+        const finalData = response.data.find(data => data.email === userEmail);
+        if (finalData !== undefined) {
+            localStorage.setItem('users', JSON.stringify(finalData));
             window.location.href = "./index2.html";
         } else {
-            throw 'Email not valid '
+            throw 'Email not valid ';
         }
-    } catch (e) {
-        newerror.innerHTML = e
+    } catch (err) {
+        error.innerHTML = err;
     }
 });

@@ -33,7 +33,7 @@
     letter-spacing: 0.04em;
 }
 
-.main-album {
+.mainAlbum {
     min-width: 100%;
     min-height: 100vh;
     display: flex;
@@ -44,6 +44,6 @@
     padding-bottom: 2rem;
 }
 
-.main-album section h1 {
+.mainAlbum section h1 {
     cursor: pointer;
 }

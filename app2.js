@@ -1,21 +1,21 @@
-const newdiv = document.querySelector('.main-album')
-const newalbum = async() => {
+const mainDiv = document.querySelector('.mainAlbum')
+const newAlbum = async() => {
     const response = await axios.get("https://jsonplaceholder.typicode.com/albums")
-    const duser = JSON.parse(localStorage.getItem("users"))
-    let finalalbum = response.data.filter(q => q.userId === duser.id)
-    finalalbum.forEach(re => {
-        const newsec = document.createElement('SECTION');
-        const newti = document.createElement('h1');
-        newsec.setAttribute('id', re.id)
-        newdiv.appendChild(newsec);
-        newsec.appendChild(newti);
-        newti.innerText = re.title;
+    const userGetInfo = JSON.parse(localStorage.getItem("users"))
+    const finalAlbum = response.data.filter(data => data.userId === userGetInfo.id)
+    finalAlbum.forEach(albumData => {
+        const section = document.createElement('SECTION');
+        const titleH1 = document.createElement('h1');
+        section.setAttribute('id', albumData.id)
+        mainDiv.appendChild(section);
+        section.appendChild(titleH1);
+        titleH1.innerText = albumData.title;
     });
-    const clicksec = document.querySelectorAll('section')
-    clicksec.forEach(go => {
-        go.addEventListener('click', function() {
-            window.location.href = `./index3.html?q=${go.id}`
+    const clickSection = document.querySelectorAll('section');
+    clickSection.forEach(clickData => {
+        clickData.addEventListener('click', function() {
+            window.location.href = `./index3.html?q=${clickData.id}`
         })
     })
 }
-newalbum();
+newAlbum();
